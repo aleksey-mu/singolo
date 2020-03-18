@@ -7,33 +7,44 @@
     <title>Singolo</title>
 </head>
 <body>
-    <header>
+    <header class="header-sticky header-fixed">
         <div class="container">
             <div class="header-container">
                 <a class="main-logo" href="#"><h1>Singolo<span class="logo-star">*</span></h1></a>
                 <nav class="main-nav">
-                    <ul>
-                    <li class="nav-item"><a class="active-page" href="#">Home</a></li>
-                    <li class="nav-item"><a href="#Our_Services">Services</a></li>
-                    <li class="nav-item"><a href="#Portfolio">Portfolio</a></li>
-                    <li class="nav-item"><a href="#About_Us">About</a></li>
-                    <li class="nav-item"><a href="#Contact">Contact</a></li>
+                    <ul id="menu">
+                    <li class="nav-item"><a class="active-page" href="#home">Home</a></li>
+                    <li class="nav-item"><a href="#our-services">Services</a></li>
+                    <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a href="#about-us">About</a></li>
+                    <li class="nav-item"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
       </header>
 
-      <section class="main-slider">
+      <section class="main-slider anchor">
+        <p class="anchor-point" id="home"></p>
         <div class="slider-container">
-          <a href="#" class="slide-left"><img type ="button"  src="assets/images/left.png" alt=""></a>
-          <img class="iphone-vertical" src="assets/images/iPhone Vertical.png" alt="">
-          <img class="iphone-horizontal" src="assets/images/iPhone Horizontal.png" alt="">
-          <a href="#" class="slide-right"><img src="assets/images/right.png" alt=""></img></a>
+          <a href="#" id="slide-to-left"><img type ="button" src="assets/images/left.png" alt="left"></a>
+          <div class="slides-area">
+              <div class="first-slide slide active">
+                <div id="vertical-screen-off"></div>
+                <div id="horizontal-screen-off"></div>
+                <img class="iphone-vertical" src="assets/images/iPhone Vertical.png" alt="iPhone Vertical">
+                <img class="iphone-horizontal" src="assets/images/iPhone Horizontal.png" alt="iPhone Horizontal">
+              </div>
+              <div class="second-slide slide">
+                <img class="phones" src="assets/images/phones.png" alt="phones">
+              </div>
+          </div>
+          <a href="#" id="slide-to-right"><img src="assets/images/right.png" alt="right"></img></a>
         </div>
       </section>
 
-      <section class="main-features">
+      <section class="main-features anchor">
+        <p class="anchor-point" id="our-services"></p>
         <div class="features-container">
             <h2 class="services-title">Our Services</h2>
             <p class="services-subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -98,62 +109,63 @@
       </section>
 
 
-      <section class="portfolio">
+      <section class="portfolio anchor">
+        <p class="anchor-point" id="portfolio"></p>
         <div class="header-portfolio">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <div class="portfolio__nav">
-                    <ul class="portfolio__menu">
-                        <li class="portfolio-menu__item"><a class="portfolio-menu__link portfolio-menu__link_active" href="#">All</a></li>
-                        <li class="portfolio-menu__item"><a class="portfolio-menu__link" href="#">Web Design</a></li>
-                        <li class="portfolio-menu__item"><a class="portfolio-menu__link" href="#">Graphic Design</a></li>
-                        <li class="portfolio-menu__item"><a class="portfolio-menu__link" href="#">Artwork</a></li>
+                    <ul class="portfolio__menu" id="portfolio-tab">
+                        <li class="portfolio-menu__item"><p class="portfolio-menu__link portfolio-menu__link_active" href="">All</p></li>
+                        <li class="portfolio-menu__item"><p class="portfolio-menu__link" href="">Web Design</p></li>
+                        <li class="portfolio-menu__item"><p class="portfolio-menu__link" href="">Graphic Design</p></li>
+                        <li class="portfolio-menu__item"><p class="portfolio-menu__link" href="">Artwork</p></li>
                     </ul>
                 </div>
-            <div class="layout-4-column">
+            <div class="layout-4-column" id="portfolio-examples">
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/01.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/1.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/02.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/2.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/03.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/3.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/04.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/4.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/05.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/5.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/06.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/6.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/07.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/7.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/08.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/8.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
                     <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/09.png" alt="portfolio image" class="portfolio__img">
+                        <img src="assets/images/portfolio/9.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
                 <div class="portfolio-content">
@@ -171,16 +183,11 @@
                         <img src="assets/images/portfolio/12.png" alt="portfolio image" class="portfolio__img">
                     </div>
                 </div>
-                <!-- [TEST] this should be hidden because of overflow -->
-                <div class="portfolio-content">
-                    <div class="portfolio-content__image">
-                        <img src="assets/images/portfolio/12.png" alt="portfolio image" class="portfolio__img">
-                    </div>
-                </div>
             </div>
         </div>
       </section>
-      <section class="about-us">
+      <section class="about-us anchor">
+        <p class="anchor-point" id="about-us"></p>
         <div class="about-us-container">
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -253,7 +260,8 @@
     </section>
 
 
-    <section class="form" >
+    <section class="form anchor">
+        <p class="anchor-point" id="contact"></p>
         <div class="form-container">
             <h2 class="contact-us-title"> Get a Quote</h2>
             <p class="contact-us-subtitle">
@@ -287,7 +295,7 @@
 
       <footer>
           <div class="footer-container">
-            <div class="footer-copyright" ><p>© Copyright 2013 · by PSDchat.com</p></div>
+            <div class="footer-copyright" ><p>© Copyright 2020</p></div>
             <div class="footer-container-link">
                 <a href="#" >
                 <img
@@ -316,5 +324,6 @@
                 </div>
         </div>
       </footer>
+      <script src="script.js"></script>
 </body>
 </html>
