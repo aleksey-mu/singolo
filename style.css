@@ -977,11 +977,31 @@ footer{
     padding: 0 10px 20px 0;
 }
 .employee__subtitle {
-
     padding-bottom: 15px;
+}
 
+/* form */
+
+.form-block {
+    flex-direction: column;
+}
+.form-btn {
+    width: 100%;
+    padding: 10px 0 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+.form-info {
+    padding-left: 0px;
+}
+.footer-copyright {
+    display: none;
+}
+.footer-container {
+    justify-content: center;
 }
 }
+
 
 @media screen and (max-width: 374px) {
 
