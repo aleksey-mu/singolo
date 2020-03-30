@@ -330,15 +330,16 @@
         </div>
       </footer>
 
-      <div class="modal">
-        <div class="modal__shadow"></div>
-        <div class="modal__window">
-          <h2 class="modal__header"></h2>
-          <h3 class="modal__subject"></h3>
-          <p class="modal__description"></p>
-          <button class="modal__close button">Ok</button>
-        </div>
-      </div>
+      <template class="modal" id="modal">
+        <div class="overlay">
+            <div class="modal-window">
+              <h4 class="modal-window__header">Letter is sent!</h4>
+              <p class="modal-window__subject">No subject</p>
+              <p><pre class="modal-window__message">No description</pre></p>
+              <button class="modal-window__button">Ok</button>
+            </div>
+          </div>
+        </template>
 
       <script src="script.js"></script>
 </body>

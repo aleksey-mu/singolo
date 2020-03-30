@@ -1,18 +1,18 @@
-'use strict';
+// 'use strict';
 
-window.onload = function() {
-  disableAnimationsOnLoading();
-  addScrollHandler();
-  addModalHandlers();
-  addPortfolioImageHandler();
-  addPhonesHandler();
-  addFilterHandler();
-  addSliderHandler();
-  addFormHandler();
-  addBurgerHandler();
-  addMenuHandler();
-  addResizeHandler();
-}
+// window.onload = function() {
+//   disableAnimationsOnLoading();
+//   addScrollHandler();
+//   addModalHandlers();
+//   addPortfolioImageHandler();
+//   addPhonesHandler();
+//   addFilterHandler();
+//   addSliderHandler();
+//   addFormHandler();
+//   addBurgerHandler();
+//   addMenuHandler();
+//   addResizeHandler();
+// }
 const MENU = document.getElementById('menu');
 const PORTFOLIO = document.getElementById('portfolio-examples');
 const PORTFOLIO_TABS = document.getElementById('portfolio-tab');
@@ -20,6 +20,7 @@ const SCREEN_VERT = document.getElementById('vertical-screen-off');
 const SCREEN_HORIZ = document.getElementById('horizontal-screen-off');
 const ARROW_LEFT = document.getElementById('slide-to-left');
 const ARROW_RIGHT = document.getElementById('slide-to-right');
+const FORM = document.querySelector('.form-block form');
 
 document.addEventListener('scroll', onScroll);
 
@@ -68,10 +69,6 @@ PORTFOLIO_TABS.addEventListener('click', (event) => {
       }
 
       mixPictures();
-
-      // PORTFOLIO.querySelectorAll('div div').forEach(el => {
-      //     el.style.order = Math.floor(Math.random() * 13);
-      // })
   }
 })
 
@@ -172,112 +169,28 @@ document.querySelector('#slide-to-right').addEventListener('click', function() {
 
 
 
+FORM.addEventListener('submit', submitFormHandler);
 
-const form = document.querySelector(".form-block");
+function submitFormHandler (e) {
+  e.preventDefault();
+  displayModal();
+  fillModal();
+  document.querySelector('.modal-window__button').addEventListener('click', removeModal);
+}
 
-const modal = document.querySelector(".modal");
-const modalShadow = document.querySelector(".modal__shadow");
-const modalHeader = modal.querySelector(".modal__header");
-const modalSubject = modal.querySelector(".modal__subject");
-const modalDescription = modal.querySelector(".modal__description");
-const modalClose = modal.querySelector(".modal__close");
+function fillModal () {
+  if (FORM.subject.value) document.querySelector('.modal-window__subject').textContent = 'Subject: ' + FORM.subject.value;
+  if (FORM.message.value) document.querySelector('.modal-window__message').textContent = 'Description: ' + FORM.message.value;
+}
 
-const inputName = form.querySelector('input[name="name"]');
-const inputEmail = form.querySelector('input[name="email"]');
-const inputSubject = form.querySelector('input[name="subject"]');
-const inputDetails = form.querySelector('input[name="message"]');
+function displayModal () {
+  document.body.append(modal.content.cloneNode(true));
+}
 
-const content = document.querySelector(".content");
-
-const toggleScreen = (value) => {
-  content.classList.toggle("content--modal", value);
+function removeModal (e) {
+  e.target.closest('.overlay').remove();
+  FORM.reset();
 }
 
 
-const openModal = () => {
-  modal.classList.add("modal--active");
-  toggleScreen(true);
-}
 
-const clearForm = () => {
-  inputName.value = "";
-  inputEmail.value = "";
-  inputSubject.value = "";
-  inputDetails.value = "";
-}
-
-const closeModal = () => {
-  modal.classList.remove("modal--active");
-  toggleScreen(false);
-  clearForm();
-}
-
-const addModalHandlers = () => {
-  modalClose.addEventListener("click", () => {
-    closeModal()
-  });
-
-  document.addEventListener("click", (e) => {
-    if(e.target === modalShadow) {
-      closeModal()
-    }
-  });
-
-  document.addEventListener("keydown", (e) => {
-    if(e.code === "Escape") {
-      closeModal()
-    }
-  });
-}
-
-const setModal = () => {
-  modalHeader.innerText = "The letter was sent";
-  modalSubject.innerText = addField("Subject: ", inputSubject.value, "No subject");
-  modalDescription.innerText = addField("Description: ", inputDetails.value, "No description");
-
-  openModal();
-}
-
-
-const addFormHandler = () => {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      setModal();
-    });
-  }
-  
-
-
-
-
-
-  
-// PORTFOLIO
-
-const tags_menu = document.querySelector('.tags');
-const tags = [...tags_menu.querySelectorAll('.tags__item')];
-const gallery = document.querySelector('.portfolio .layout-4-col');
-const pics = [...gallery.querySelectorAll('.portfolio__pic')];
-
-tags_menu.addEventListener('click', tagClickHandler);
-gallery.addEventListener('click', highlightPicture);
-
-function tagClickHandler (e) {
-  if (e.target.classList.contains('tags__item_active') || !e.target.classList.contains('tags__item')) return;
-  tags.forEach(tag => tag.classList.remove('tags__item_active'));
-  e.target.classList.add('tags__item_active');
-  mixPictures();
-}
-
-function highlightPicture (e) {
-  if (e.target.nodeName != 'IMG' || e.target.getAttribute('outline') != null) return;
-  pics.forEach(pic => pic.children[0].style.outline = '');
-  e.target.style.outline = '5px solid #f06c64';
-}
-
-function mixPictures () {
-  pics.forEach(pic => pic.remove());
-  pics.push(pics.shift());
-  const picsContainer = document.querySelector('.portfolio .layout-4-col');
-  pics.forEach(pic => picsContainer.append(pic));
-}
