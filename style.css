@@ -163,7 +163,7 @@ a.active-page {
 /* slider */
 
 .main-slider {
-    height: 600px;
+    /* height: 600px; */
     background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
 }
@@ -900,6 +900,87 @@ footer{
     .main-nav {
         display: none;
     }
+
+        /* slider */
+       
+        .slides-area {
+            padding: 0px 10px;
+            overflow: hidden;
+        }
+        .iphone-vertical {
+        width: 79px;
+       }
+        .iphone-horizontal {
+        width: 177px;
+       }
+       .horizontal-wrapper {
+        margin-left: 25px;
+        margin-top: 39px;
+    }
+    .slider-container {
+        max-width: 1020px;
+        padding: 40px 15px;
+    }
+
+       #vertical-screen-off {
+        top: 21px;
+        left: 4px;
+        width: 63px;
+        height: 110px;
+        }
+        #horizontal-screen-off {
+        top: 5px;
+        left: 22px;
+        width: 122px;
+        height: 69px;
+        }
+        .second-slide > img {
+            display: block;
+            height: 160px;
+        }
+
+ /* features */
+
+  .layout-3-column {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2px;
+}
+  .benefit-content {
+    width: 100%;
+}
+.features-container {
+    margin: 0 auto;
+    padding: 0px 29px 0px 32px;
+}
+.benefit-content {
+    word-spacing: 9px;
+    padding-right: 0px;
+}
+
+
+/* portfolio */
+
+.layout-4-column {
+    grid-template-columns: 1fr 1fr;
+}
+.layout-4-column:nth-child(n+9) {
+    display: none;
+  }
+
+
+  /* about us */
+
+
+.portfolio__employee {
+    width: 100%;
+    padding: 0 10px 20px 0;
+}
+.employee__subtitle {
+
+    padding-bottom: 15px;
+
+}
 }
 
 @media screen and (max-width: 374px) {
