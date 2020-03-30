@@ -854,7 +854,6 @@ footer{
     height: 142px;
     }
     .second-slide > img {
-        display: block;
         height: 364px;
     }
 
@@ -918,7 +917,6 @@ footer{
         margin-top: 39px;
     }
     .slider-container {
-        max-width: 1020px;
         padding: 40px 15px;
     }
 
@@ -935,7 +933,6 @@ footer{
         height: 69px;
         }
         .second-slide > img {
-            display: block;
             height: 160px;
         }
 
@@ -1000,11 +997,39 @@ footer{
 .footer-container {
     justify-content: center;
 }
+.form-container {
+    padding: 2px 30px 16px 30px;
+
+}
 }
 
 
 @media screen and (max-width: 374px) {
-
+    .iphone-vertical {
+        width: 65px;
+       }
+        .iphone-horizontal {
+        width: 145px;
+       }
+       .horizontal-wrapper {
+        margin-left: 10px;
+        margin-top: 29px;
+    }
+    #vertical-screen-off {
+        top: 17px;
+        left: 4px;
+        width: 51px;
+        height: 91px;
+    }
+    #horizontal-screen-off {
+        top: 3px;
+        left: 18px;
+        width: 100px;
+        height: 58px;
+    }
+    .second-slide > img {
+        height: 131px;
+    }
 }
 
 
