@@ -53,15 +53,28 @@ PORTFOLIO.addEventListener('click', (event) => {
 
 
 PORTFOLIO_TABS.addEventListener('click', (event) => {
-    if (event.target.classList['value'] === 'portfolio-menu__link') {
-        PORTFOLIO_TABS.querySelectorAll('li p').forEach(el => el.classList.remove('portfolio-menu__link_active'));
-        event.target.classList.add('portfolio-menu__link_active');
+  if (event.target.classList['value'] === 'portfolio-menu__link') {
+      PORTFOLIO_TABS.querySelectorAll('li p').forEach(el => el.classList.remove('portfolio-menu__link_active'));
+      event.target.classList.add('portfolio-menu__link_active');
 
-        PORTFOLIO.querySelectorAll('div div').forEach(el => {
-            el.style.order = Math.floor(Math.random() * 13);
-        })
-    }
+      const gallery = document.querySelector('#portfolio-examples');
+      const pics = [...gallery.querySelectorAll('.portfolio-content')];
+
+      function mixPictures () {
+        pics.forEach(pic => pic.remove());
+        pics.push(pics.shift());
+        const picsContainer = document.querySelector('#portfolio-examples');
+        pics.forEach(pic => picsContainer.append(pic));
+      }
+
+      mixPictures();
+
+      // PORTFOLIO.querySelectorAll('div div').forEach(el => {
+      //     el.style.order = Math.floor(Math.random() * 13);
+      // })
+  }
 })
+
 
 let vertScreenOff = false;
 let horizScreenOff = false;
@@ -233,3 +246,38 @@ const addFormHandler = () => {
     });
   }
   
+
+
+
+
+
+  
+// PORTFOLIO
+
+const tags_menu = document.querySelector('.tags');
+const tags = [...tags_menu.querySelectorAll('.tags__item')];
+const gallery = document.querySelector('.portfolio .layout-4-col');
+const pics = [...gallery.querySelectorAll('.portfolio__pic')];
+
+tags_menu.addEventListener('click', tagClickHandler);
+gallery.addEventListener('click', highlightPicture);
+
+function tagClickHandler (e) {
+  if (e.target.classList.contains('tags__item_active') || !e.target.classList.contains('tags__item')) return;
+  tags.forEach(tag => tag.classList.remove('tags__item_active'));
+  e.target.classList.add('tags__item_active');
+  mixPictures();
+}
+
+function highlightPicture (e) {
+  if (e.target.nodeName != 'IMG' || e.target.getAttribute('outline') != null) return;
+  pics.forEach(pic => pic.children[0].style.outline = '');
+  e.target.style.outline = '5px solid #f06c64';
+}
+
+function mixPictures () {
+  pics.forEach(pic => pic.remove());
+  pics.push(pics.shift());
+  const picsContainer = document.querySelector('.portfolio .layout-4-col');
+  pics.forEach(pic => picsContainer.append(pic));
+}
