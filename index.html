@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <title>Singolo</title>
 </head>
-<body>
+<body class="content">
     <header class="header-sticky header-fixed">
         <div class="container">
+            
             <div class="header-container">
                 <a class="main-logo" href="#"><h1>Singolo<span class="logo-star">*</span></h1></a>
                 <nav class="main-nav">
@@ -30,10 +31,14 @@
           <a href="#" id="slide-to-left"><img type ="button" src="assets/images/left.png" alt="left"></a>
           <div class="slides-area">
               <div class="first-slide slide active">
-                <div id="vertical-screen-off"></div>
-                <div id="horizontal-screen-off"></div>
-                <img class="iphone-vertical" src="assets/images/iPhone Vertical.png" alt="iPhone Vertical">
-                <img class="iphone-horizontal" src="assets/images/iPhone Horizontal.png" alt="iPhone Horizontal">
+                <div class="vertical-wrapper">
+                    <img class="iphone-vertical" src="assets/images/iPhone Vertical.png" alt="iPhone Vertical">
+                    <div id="vertical-screen-off"></div>
+                </div>
+                <div class="horizontal-wrapper">
+                    <img class="iphone-horizontal" src="assets/images/iPhone Horizontal.png" alt="iPhone Horizontal">
+                    <div id="horizontal-screen-off"></div>
+                </div>
               </div>
               <div class="second-slide slide">
                 <img class="phones" src="assets/images/phones.png" alt="phones">
@@ -270,12 +275,12 @@
                 eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
             <div class="form-block">
-                <form method="POST" action="">
+                <form method="POST" action="#" method="POST">
                     <input type="text" name="name" placeholder="Name (Required)" required>
                     <input type="email" name="email" placeholder="Email (Required)" required>
                     <input type="text" name="subject" placeholder="Subject">
                     <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
-                    <button class="form-btn" type="submit" formmethod="POST">Submit</button>
+                    <button class="form-btn" type="submit"  value="Send">Send</button>
                 </form>
                     <div class="form-info">
                         <h3 class="form-info-title">Contact Information</h3>
@@ -324,6 +329,17 @@
                 </div>
         </div>
       </footer>
+
+      <div class="modal">
+        <div class="modal__shadow"></div>
+        <div class="modal__window">
+          <h2 class="modal__header"></h2>
+          <h3 class="modal__subject"></h3>
+          <p class="modal__description"></p>
+          <button class="modal__close button">Ok</button>
+        </div>
+      </div>
+
       <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,18 @@
+'use strict';
+
+window.onload = function() {
+  disableAnimationsOnLoading();
+  addScrollHandler();
+  addModalHandlers();
+  addPortfolioImageHandler();
+  addPhonesHandler();
+  addFilterHandler();
+  addSliderHandler();
+  addFormHandler();
+  addBurgerHandler();
+  addMenuHandler();
+  addResizeHandler();
+}
 const MENU = document.getElementById('menu');
 const PORTFOLIO = document.getElementById('portfolio-examples');
 const PORTFOLIO_TABS = document.getElementById('portfolio-tab');
@@ -136,3 +151,85 @@ document.querySelector('#slide-to-right').addEventListener('click', function() {
 		nextSlide(currentSlide);
 	}
 });
+
+
+
+
+
+
+
+
+
+const form = document.querySelector(".form-block");
+
+const modal = document.querySelector(".modal");
+const modalShadow = document.querySelector(".modal__shadow");
+const modalHeader = modal.querySelector(".modal__header");
+const modalSubject = modal.querySelector(".modal__subject");
+const modalDescription = modal.querySelector(".modal__description");
+const modalClose = modal.querySelector(".modal__close");
+
+const inputName = form.querySelector('input[name="name"]');
+const inputEmail = form.querySelector('input[name="email"]');
+const inputSubject = form.querySelector('input[name="subject"]');
+const inputDetails = form.querySelector('input[name="message"]');
+
+const content = document.querySelector(".content");
+
+const toggleScreen = (value) => {
+  content.classList.toggle("content--modal", value);
+}
+
+
+const openModal = () => {
+  modal.classList.add("modal--active");
+  toggleScreen(true);
+}
+
+const clearForm = () => {
+  inputName.value = "";
+  inputEmail.value = "";
+  inputSubject.value = "";
+  inputDetails.value = "";
+}
+
+const closeModal = () => {
+  modal.classList.remove("modal--active");
+  toggleScreen(false);
+  clearForm();
+}
+
+const addModalHandlers = () => {
+  modalClose.addEventListener("click", () => {
+    closeModal()
+  });
+
+  document.addEventListener("click", (e) => {
+    if(e.target === modalShadow) {
+      closeModal()
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if(e.code === "Escape") {
+      closeModal()
+    }
+  });
+}
+
+const setModal = () => {
+  modalHeader.innerText = "The letter was sent";
+  modalSubject.innerText = addField("Subject: ", inputSubject.value, "No subject");
+  modalDescription.innerText = addField("Description: ", inputDetails.value, "No description");
+
+  openModal();
+}
+
+
+const addFormHandler = () => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      setModal();
+    });
+  }
+  
