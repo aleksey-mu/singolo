@@ -451,9 +451,10 @@ a.active-page {
     grid-gap: 20px;
     margin-bottom: 50px;
 }
-.layout-4-column:nth-child(n+13) {
+#portfolio-examples > div:nth-child(n+13) {
     display: none;
-  }
+}
+
 .portfolio__img {
     width: 100%;
 
@@ -938,9 +939,10 @@ footer{
 .layout-4-column {
     grid-template-columns: 1fr 1fr;
 }
-.layout-4-column:nth-child(n+9) {
+
+  #portfolio-examples > div:nth-child(n+9) {
     display: none;
-  }
+}
 
 
   /* about us */

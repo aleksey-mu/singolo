@@ -46,11 +46,19 @@ function onScroll() {
 
 
 
-
 PORTFOLIO.addEventListener('click', (event) => {
-    PORTFOLIO.querySelectorAll('div div img').forEach(el => el.classList.remove('active-img'));
-    event.target.classList.add('active-img');;
+    if (event.target.classList['value'] === 'portfolio__img') {
+        PORTFOLIO.querySelectorAll('div div img').forEach(el => el.classList.remove('active-img'));
+        event.target.classList.add('active-img');
+    }
 })
+
+
+
+// PORTFOLIO.addEventListener('click', (event) => {
+//     PORTFOLIO.querySelectorAll('div div img').forEach(el => el.classList.remove('active-img'));
+//     event.target.classList.add('active-img');
+// })
 
 
 PORTFOLIO_TABS.addEventListener('click', (event) => {
