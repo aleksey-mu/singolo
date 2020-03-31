@@ -621,13 +621,9 @@ a.active-page {
 form > * {
     display: flex;
   }
-input, textarea{
+input, textarea {
     padding: 12px 15px;
-    /* min-width: 300px;
-    max-width: 619px;
-    width: 100%; */
-    max-width: 100%;
-  min-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     font: 1.2rem 'Lato Regular', Verdana, sans-serif;
     border: none;
@@ -635,6 +631,9 @@ input, textarea{
     background-color: #d6564f;
     color: #f0d8d9;
     margin-bottom: 16px;
+  }
+  input {
+    height: 35px;
   }
 ::placeholder {
   color: #f48c8f;
@@ -664,9 +663,11 @@ textarea {
     color: #f0d8d9;
     
 } 
+
 input[name="email"]:required:focus,
 input[name="name"]:required:focus {
     border:2px solid red;
+    outline: none;
 }
 
 
@@ -878,9 +879,9 @@ footer{
         display: none;
     }
 
-        /* slider */
+/* slider */
        
-        .slides-area {
+    .slides-area {
             padding: 0px 10px;
             overflow: hidden;
         }

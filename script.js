@@ -1,18 +1,3 @@
-// 'use strict';
-
-// window.onload = function() {
-//   disableAnimationsOnLoading();
-//   addScrollHandler();
-//   addModalHandlers();
-//   addPortfolioImageHandler();
-//   addPhonesHandler();
-//   addFilterHandler();
-//   addSliderHandler();
-//   addFormHandler();
-//   addBurgerHandler();
-//   addMenuHandler();
-//   addResizeHandler();
-// }
 const MENU = document.getElementById('menu');
 const PORTFOLIO = document.getElementById('portfolio-examples');
 const PORTFOLIO_TABS = document.getElementById('portfolio-tab');
@@ -52,13 +37,6 @@ PORTFOLIO.addEventListener('click', (event) => {
         event.target.classList.add('active-img');
     }
 })
-
-
-
-// PORTFOLIO.addEventListener('click', (event) => {
-//     PORTFOLIO.querySelectorAll('div div img').forEach(el => el.classList.remove('active-img'));
-//     event.target.classList.add('active-img');
-// })
 
 
 PORTFOLIO_TABS.addEventListener('click', (event) => {
