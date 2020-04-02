@@ -7,9 +7,9 @@
     <title>Singolo</title>
 </head>
 <body class="content">
-    <header class="header-sticky header-fixed">
+    <header class="header-fixed">
         <div class="container">
-            
+            <span class="hamburger"><span class="hamburger-line"></span></span>
             <div class="header-container">
                 <a class="main-logo" href="#"><h1>Singolo<span class="logo-star">*</span></h1></a>
                 <nav class="main-nav">
@@ -23,10 +23,19 @@
                 </nav>
             </div>
         </div>
-      </header>
-
-      <section class="main-slider anchor">
-        <p class="anchor-point" id="home"></p>
+    </header>
+      <div class="hamburger-menu-container">
+        <nav class="hamburger-nav">
+            <ul id="hamburger-menu">
+                <li class="hamburger-nav-item"><a class="active-page" href="#home">Home</a></li>
+                <li class="hamburger-nav-item"><a href="#our-services">Services</a></li>
+                <li class="hamburger-nav-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="hamburger-nav-item"><a href="#about-us">About</a></li>
+                <li class="hamburger-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+      </div>
+      <section class="main-slider" id="home">
         <div class="slider-container">
           <a href="#" id="slide-to-left"><img type ="button" src="assets/images/left.png" alt="left"></a>
           <div class="slides-area">
@@ -48,8 +57,7 @@
         </div>
       </section>
 
-      <section class="main-features anchor">
-        <p class="anchor-point" id="our-services"></p>
+      <section class="main-features" id="our-services">
         <div class="features-container">
             <h2 class="services-title">Our Services</h2>
             <p class="services-subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -113,9 +121,8 @@
         </div>
       </section>
 
-
-      <section class="portfolio anchor">
-        <p class="anchor-point" id="portfolio"></p>
+ 
+      <section class="portfolio" id="portfolio">
         <div class="header-portfolio">
             <h2 class="portfolio__title">Portfolio</h2>
             <p class="portfolio__subtitle">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
@@ -191,8 +198,7 @@
             </div>
         </div>
       </section>
-      <section class="about-us anchor">
-        <p class="anchor-point" id="about-us"></p>
+      <section class="about-us" id="about-us">
         <div class="about-us-container">
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__subtitle">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -265,8 +271,7 @@
     </section>
 
 
-    <section class="form anchor">
-        <p class="anchor-point" id="contact"></p>
+    <section class="form" id="contact">
         <div class="form-container">
             <h2 class="contact-us-title"> Get a Quote</h2>
             <p class="contact-us-subtitle">
@@ -330,6 +335,8 @@
         </div>
       </footer>
 
+
+      
       <template class="modal" id="modal">
         <div class="overlay">
             <div class="modal-window">

@@ -6,29 +6,45 @@ const SCREEN_HORIZ = document.getElementById('horizontal-screen-off');
 const ARROW_LEFT = document.getElementById('slide-to-left');
 const ARROW_RIGHT = document.getElementById('slide-to-right');
 const FORM = document.querySelector('.form-block form');
+const BURGER_BUTTON = document.querySelector('span.hamburger');
+const BURGER_MENU = document.querySelector('.hamburger-menu-container');
 
 document.addEventListener('scroll', onScroll);
 
 function onScroll() {
     const cursorPos = window.scrollY;
-    const divs = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section');
     const links = document.querySelectorAll('#menu a');
+    const linksBurger = document.querySelectorAll('#hamburger-menu a');
     const headerHeight = document.querySelector('header').offsetHeight;
     
-    divs.forEach((el) => {
-        const element = el.querySelector('.anchor-point');
-
+    sections.forEach((el) => {
         if (el.offsetTop - headerHeight <= cursorPos && (el.offsetTop + el.offsetHeight) > cursorPos) {
             links.forEach((a) => {
                 a.classList.remove('active-page');
-                if (element.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
+                    a.classList.add('active-page');
+                }
+            })
+            linksBurger.forEach((a) => {
+                a.classList.remove('active-page');
+                if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
                     a.classList.add('active-page');
                 }
             })
         }
     })
+    
 }
 
+// BURGER MENU 
+
+BURGER_BUTTON.addEventListener('click', () => {
+    BURGER_MENU.classList.toggle('hamburger-menu-shown');
+})
+
+
+// PORTFOLIO TABS
 
 
 PORTFOLIO.addEventListener('click', (event) => {
