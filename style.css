@@ -375,7 +375,7 @@ a.active-page {
   .slider-container #slide-to-right,
   .slider-container #slide-to-left {
     cursor: pointer;
-    z-index: 300;
+    z-index: 50;
 }
 
   .slider-container #slide-to-left:hover,

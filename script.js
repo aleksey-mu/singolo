@@ -9,7 +9,7 @@ const FORM = document.querySelector('.form-block form');
 const BURGER_BUTTON = document.querySelector('span.hamburger');
 const BURGER_MENU = document.querySelector('.hamburger-menu-container');
 const BURGER_LINKS = document.querySelector('#hamburger-menu');
-const SLIDER_CONTAINER = document.querySelector('#home > .slider-container');
+const SLIDER_CONTAINER = document.querySelector('#home');
 
 document.addEventListener('scroll', () => {
     const cursorPos = window.scrollY;
