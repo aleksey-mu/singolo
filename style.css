@@ -221,13 +221,11 @@ h1 {
 a.active-page {
     color: #f06c64;
 }
+
 .hamburger-nav-item a:focus,
-.hamburger-nav-item a:hover,
-.nav-item a:focus,
-.nav-item a:hover {
+.nav-item a:focus {
     color: #f06c64;
 }
-
 
 
 
@@ -377,12 +375,6 @@ a.active-page {
     cursor: pointer;
     z-index: 50;
 }
-
-  .slider-container #slide-to-left:hover,
-  .slider-container #slide-to-right:hover {
-    transform: scale(1.2);
-}
-
 
 
 
@@ -536,7 +528,7 @@ a.active-page {
     border: 1px solid #fff;
     
 }
-.portfolio-menu__link:hover, .portfolio-menu__link:focus {
+.portfolio-menu__link:focus {
     cursor: pointer;
     background-color: #484848;
     color: #fefefe;
@@ -557,31 +549,13 @@ a.active-page {
     width: 100%;
 
 }
-/* .portfolio-content::before {
-    content: "";
-    float: left;
-    padding-top: 100%;
-} */
-
-
-
-.portfolio__img:hover {
-    cursor: pointer;
-    opacity: 0.7;
-    transition: 0.3s;
-}
 
 .active-img {
     border: #F06C64 solid 5px;
 }
 
 
-
-
-
 /* about us */
-
-
 
 
 .about-us {
@@ -651,10 +625,7 @@ a.active-page {
     padding-right: 5px;
 }
 
-.employee__icon:hover {
-    background-color: #D3D3D3;
-    border-radius: 50%;
-}
+
 
 /* get a quote */
 
@@ -754,13 +725,7 @@ textarea {
     border: 0px;
     border-radius: 5px;
   }
-.modal-window__button:hover,
-.form-btn:hover {
-    cursor: pointer;
-    background-color: #d6564f;
-    color: #f0d8d9;
-    
-} 
+
 
 input[name="email"]:required:focus,
 input[name="name"]:required:focus {
@@ -840,10 +805,7 @@ footer{
     margin-top: 1px;
     margin-left: 3.5px;
 }
-.footer-link:hover {
-    background-color: #D3D3D3;
-    border-radius: 50%;
-}
+
 
 
 
@@ -901,7 +863,41 @@ footer{
     overflow: auto;
   }
 
-
+@media (hover: hover) {
+    .hamburger-nav-item a:hover,
+    .nav-item a:hover {
+        color: #f06c64;
+    }
+    .footer-link:hover {
+        background-color: #D3D3D3;
+        border-radius: 50%;
+    }
+    .modal-window__button:hover,
+    .form-btn:hover {
+    cursor: pointer;
+    background-color: #d6564f;
+    color: #f0d8d9;
+    }
+    .employee__icon:hover {
+        background-color: #D3D3D3;
+        border-radius: 50%;
+    } 
+    .portfolio__img:hover {
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.3s;
+    }
+    .portfolio-menu__link:hover {
+        cursor: pointer;
+        background-color: #484848;
+        color: #fefefe;
+        border: 1px solid #fff;
+    }
+    .slider-container #slide-to-left:hover,
+    .slider-container #slide-to-right:hover {
+      transform: scale(1.2);
+  }
+}
 
 
 @media screen and (max-width: 1019px) {
