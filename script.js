@@ -8,6 +8,7 @@ const ARROW_RIGHT = document.getElementById('slide-to-right');
 const FORM = document.querySelector('.form-block form');
 const BURGER_BUTTON = document.querySelector('span.hamburger');
 const BURGER_MENU = document.querySelector('.hamburger-menu-container');
+const BURGER_LINKS = document.querySelector('#hamburger-menu');
 
 document.addEventListener('scroll', onScroll);
 
@@ -42,6 +43,12 @@ function onScroll() {
 BURGER_BUTTON.addEventListener('click', () => {
     BURGER_MENU.classList.toggle('hamburger-menu-shown');
 })
+BURGER_LINKS.addEventListener('click', (event) => {
+    if (event.target.tagName === "A") {
+        BURGER_MENU.classList.toggle('hamburger-menu-shown');
+    }
+})
+
 
 
 // PORTFOLIO TABS

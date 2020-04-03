@@ -169,7 +169,7 @@ h1 {
     padding-left: 71px;
 }
 .hamburger-nav-item {
-    padding-bottom: 27px;
+    margin-bottom: 27px;
 }
 .hamburger-nav-item > a {
     font-size: 24px;
