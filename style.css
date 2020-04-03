@@ -896,6 +896,7 @@ footer{
     font-weight: 300;
     color: #767e9e;
     border: 1px solid grey;
+    border-radius: 10px;
     white-space: pre-wrap;
     overflow: auto;
   }
