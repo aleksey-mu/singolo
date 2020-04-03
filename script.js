@@ -9,6 +9,7 @@ const FORM = document.querySelector('.form-block form');
 const BURGER_BUTTON = document.querySelector('span.hamburger');
 const BURGER_MENU = document.querySelector('.hamburger-menu-container');
 const BURGER_LINKS = document.querySelector('#hamburger-menu');
+const SLIDER_CONTAINER = document.querySelector('#home > .slider-container');
 
 document.addEventListener('scroll', () => {
     const cursorPos = window.scrollY;
@@ -135,71 +136,6 @@ function removeModal (e) {
 
 // SLIDER
 
-// let slides = document.querySelectorAll('.slides-area .slide');
-// let currentSlide = 0;
-// let isEnabled = true;
-// let isPrimeSlide = true;
-
-// function changeCurrentSlide(n) {
-//     currentSlide = (n + slides.length) % slides.length;
-//     if (isPrimeSlide) {
-//         document.querySelector('.main-slider').style.backgroundColor = '#648BF0';
-//         isPrimeSlide = false;
-//     } else {
-//         document.querySelector('.main-slider').style.backgroundColor = '#f06c64';
-//         isPrimeSlide = true;
-//     }
-    
-// }
-
-// function hideSlide(direction) {
-// 	isEnabled = false;
-// 	slides[currentSlide].classList.add(direction);
-// 	slides[currentSlide].addEventListener('animationend', function() {
-// 		this.classList.remove('active', direction);
-// 	});
-// }
-
-// function showSlide(direction) {
-// 	slides[currentSlide].classList.add('next', direction);
-// 	slides[currentSlide].addEventListener('animationend', function() {
-// 		this.classList.remove('next', direction);
-// 		this.classList.add('active');
-// 		isEnabled = true;
-// 	});
-// }
-
-// function nextSlide(n) {
-// 	hideSlide('to-left');
-// 	changeCurrentSlide(n + 1);
-// 	showSlide('from-right');
-// }
-
-// function previousSlide(n) {
-// 	hideSlide('to-right');
-// 	changeCurrentSlide(n - 1);
-// 	showSlide('from-left');
-// }
-
-// document.querySelector('#slide-to-left').addEventListener('click', function() {
-// 	if (isEnabled) {
-// 		previousSlide(currentSlide);
-// 	}
-// });
-
-// document.querySelector('#slide-to-right').addEventListener('click', function() {
-// 	if (isEnabled) {
-// 		nextSlide(currentSlide);
-// 	}
-// });
-
-
-
-
-
-
-
-
 
 let items = document.querySelectorAll('.slides-area .slide');
 let currentItem = 0;
@@ -242,12 +178,18 @@ function previousItem(n) {
     if (isEnabled) {
         previousItem(currentItem);
     }
+    
+    SLIDER_CONTAINER.classList.toggle('primary-color');
+    SLIDER_CONTAINER.classList.toggle('secondary-color');
 });
 
 document.querySelector('#slide-to-right').addEventListener('click', function() {
     if (isEnabled) {
         nextItem(currentItem);
     }
+    SLIDER_CONTAINER.classList.toggle('primary-color');
+    SLIDER_CONTAINER.classList.toggle('secondary-color');
+
 });
 
 

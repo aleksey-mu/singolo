@@ -234,7 +234,6 @@ a.active-page {
 /* slider */
 
 .main-slider {
-    background-color: #f06c64;
     border-bottom: solid 6px #ea676b;
     
 }
@@ -325,66 +324,14 @@ a.active-page {
 }
 
 
-
-/* 
-.first-slide,
-.second-slide {
-    display: none;
-
-
+.primary-color {
+    background-color: #f06c64;
+    transition: 0.5s;
 }
-
-
-.second-slide > img {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
+.secondary-color {
+    background-color: #648BF0;
+    transition: 0.5s;
 }
-.slides-area {
-    overflow: hidden;
-}
-
-.active,
-.next {
-    display: flex;
-}
-
-.to-left {
-  animation-name: left;
-}
-
-.from-right {
-  animation-name: right;
-}
-
-.to-right {
-  animation-name: right;
-  animation-direction: reverse;
-}
-
-.from-left {
-  animation-name: left;
-  animation-direction: reverse;
-}
-
-@keyframes left {
-  from {
-    left: 0;
-  }
-  to {
-    left: -100%;
-  }
-}
-
-@keyframes right {
-  from {
-    left: 100%;
-  }
-  to {
-    left: 0;
-  }
-} */
-
 
 .vertical-wrapper {
     
