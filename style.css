@@ -79,6 +79,7 @@ h1 {
     margin: 0 auto;
     padding: 0 40px;
 }
+
 .logo-star {
     color: #f06c64;
 }
@@ -950,9 +951,12 @@ footer{
     .hamburger {
         display: inline-block;
     }
-    .main-logo {
-        padding-left: 30vw;
-    }
+
+   
+  .header-container {
+        justify-content: center;
+        width: 100%;;
+  }
     .header-fixed > div.container {
         display: flex;
         justify-content: left;
