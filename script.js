@@ -119,8 +119,8 @@ function submitFormHandler (e) {
 }
 
 function fillModal () {
-  if (FORM.subject.value) document.querySelector('.modal-window__subject').textContent = 'Subject: ' + FORM.subject.value;
-  if (FORM.message.value) document.querySelector('.modal-window__message').textContent = 'Description: ' + FORM.message.value;
+  if (FORM.subject.value) document.querySelector('.modal-window__subject').textContent = `Subject: ${FORM.subject.value}`;
+  if (FORM.message.value) document.querySelector('.modal-window__message').textContent = `Description: ${FORM.message.value}`;
 }
 
 function displayModal () {

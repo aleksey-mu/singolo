@@ -740,7 +740,6 @@ input[name="name"]:required:focus {
   letter-spacing: 0.4px;
 } 
 .form-info {
-  max-width: 319px;
   padding-left: 21px;
   box-sizing: border-box;
   font-family: 'Lato-Regular', Verdana, sans-serif;
